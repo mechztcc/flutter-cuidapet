@@ -23,6 +23,7 @@ class _LoginPageState extends State<LoginPage> {
           height: 1.sh,
           child: Column(
             children: [
+              SizedBox(height: 20),
               Image.asset(
                 'assets/images/logo.png',
                 width: 150.w,
