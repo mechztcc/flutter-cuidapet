@@ -6,13 +6,15 @@ class CuidapetDefaultButton extends StatelessWidget {
   final double height;
   final double width;
   final double padding;
+  final VoidCallback? onPressed;
 
   const CuidapetDefaultButton(
       {Key? key,
       required this.label,
       required this.height,
       required this.width,
-      required this.padding})
+      required this.padding,
+      this.onPressed})
       : super(key: key);
 
   @override
@@ -22,7 +24,7 @@ class CuidapetDefaultButton extends StatelessWidget {
       width: width,
       height: height,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           label,
           style: const TextStyle(fontSize: 20),

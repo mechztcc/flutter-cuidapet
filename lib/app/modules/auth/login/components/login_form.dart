@@ -26,11 +26,12 @@ class _LoginFormState extends State<LoginForm> {
         const SizedBox(
           height: 20,
         ),
-        const CuidapetDefaultButton(
+        CuidapetDefaultButton(
           height: 60,
           width: double.infinity,
           label: 'Entrar',
           padding: 10,
+          onPressed: () {},
         )
       ],
     );

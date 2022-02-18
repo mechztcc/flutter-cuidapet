@@ -1,3 +1,7 @@
+import 'package:app_cuidapet/app/core/ui/components/rounded_button_with_icon.dart';
+import 'package:app_cuidapet/app/core/ui/cuidapet_icons.dart';
+import 'package:app_cuidapet/app/core/ui/extensions/size_screen_extension.dart';
+import 'package:app_cuidapet/app/core/ui/extensions/theme_extension.dart';
 import 'package:flutter/material.dart';
 
 class RegisterButtons extends StatelessWidget {
@@ -11,20 +15,26 @@ class RegisterButtons extends StatelessWidget {
       spacing: 10,
       runSpacing: 10,
       children: [
-        Container(
-          color: Colors.blue,
-          height: 40,
-          width: 165,
+        RoundedButtonWithIcon(
+          color: Color(0xff4267b3),
+          icon: Cuidapeticons.facebook,
+          title: 'Facebook',
+          width: .42.sw,
+          ontap: () {},
         ),
-        Container(
-          color: Colors.green,
-          height: 40,
-          width: 165,
+        RoundedButtonWithIcon(
+          color: Color(0xffe15031),
+          icon: Cuidapeticons.google,
+          title: 'Google',
+          width: .42.sw,
+          ontap: () {},
         ),
-        Container(
-          color: Colors.red,
-          height: 40,
-          width: 165,
+        RoundedButtonWithIcon(
+          color: context.primaryColorDark,
+          icon: Cuidapeticons.apple,
+          title: 'E-mail',
+          width: .42.sw,
+          ontap: () {},
         ),
       ],
     );
