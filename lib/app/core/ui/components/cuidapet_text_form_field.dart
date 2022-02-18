@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app_cuidapet/app/core/ui/extensions/theme_extension.dart';
 
 class CuidaPetTextFormField extends StatelessWidget {
   final String label;
@@ -48,7 +49,9 @@ class CuidaPetTextFormField extends StatelessWidget {
                     onPressed: () {
                       obscureTextVN.value = !obscureTextValue;
                     },
-                    icon: Icon(obscureTextValue ? Icons.lock : Icons.lock_open))
+                    icon: Icon(obscureTextValue ? Icons.lock : Icons.lock_open),
+                    color: context.primaryColor,
+                  )
                 : suffixIcon,
           ),
         );
