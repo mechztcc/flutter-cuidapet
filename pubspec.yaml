@@ -42,6 +42,8 @@ dependencies:
   flutter_screenutil: ^5.3.1
   firebase_core: ^1.12.0
   firebase_auth: ^3.3.7
+  flutter_dotenv: ^5.0.2
+  firebase_remote_config: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +57,7 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   mobx_codegen: ^2.0.5+2
   build_runner: ^2.1.7
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -70,6 +73,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - .env
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

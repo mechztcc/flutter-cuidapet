@@ -1,8 +1,10 @@
+import 'package:app_cuidapet/app/core/helpers/envitonments.dart';
 import 'package:app_cuidapet/app/core/ui/extensions/size_screen_extension.dart';
 import 'package:app_cuidapet/app/core/ui/extensions/theme_extension.dart';
 import 'package:app_cuidapet/app/modules/auth/login/components/login_form.dart';
 import 'package:app_cuidapet/app/modules/auth/login/components/register_buttons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -23,7 +25,8 @@ class _LoginPageState extends State<LoginPage> {
           height: 1.sh,
           child: Column(
             children: [
-              SizedBox(height: 20),
+              Text(Environments.param('base_url') ?? 'nada encontrado'),
+              const SizedBox(height: 20),
               Image.asset(
                 'assets/images/logo.png',
                 width: 150.w,
