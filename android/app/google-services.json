@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1093968983418",
+    "project_id": "cuidapet-curso-a8fcc",
+    "storage_bucket": "cuidapet-curso-a8fcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093968983418:android:4743775783a3f2bb32d2c3",
+        "android_client_info": {
+          "package_name": "com.example.app_cuidapet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093968983418-m0fpfnl93d00bss184llrbbrl40jjq7s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_cuidapet",
+            "certificate_hash": "998d1d424010859521dbf6908f4ffc4b505d208d"
+          }
+        },
+        {
+          "client_id": "1093968983418-ti5f6viutfp19jrohthalgksq7lno8fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFSANWnaVSlfZEog5Cg_3Q_GOZsZuTpCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093968983418-ti5f6viutfp19jrohthalgksq7lno8fg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
