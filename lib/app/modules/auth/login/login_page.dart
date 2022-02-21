@@ -1,5 +1,6 @@
 import 'package:app_cuidapet/app/core/helpers/envitonments.dart';
 import 'package:app_cuidapet/app/core/helpers/loger.dart';
+import 'package:app_cuidapet/app/core/ui/components/loader.dart';
 import 'package:app_cuidapet/app/core/ui/extensions/size_screen_extension.dart';
 import 'package:app_cuidapet/app/core/ui/extensions/theme_extension.dart';
 import 'package:app_cuidapet/app/modules/auth/login/components/login_form.dart';
@@ -15,6 +16,15 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+      Loader.show();
+      Future.delayed(Duration(seconds: 2), () => Loader.hide());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     LoggerImpl().info('Carregando LoginPage');
