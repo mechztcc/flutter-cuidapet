@@ -6,6 +6,10 @@ import 'package:app_cuidapet/app/core/local_storages/shared_preferences_local_st
 import 'package:app_cuidapet/app/core/rest_client/dio_rest_client.dart';
 import 'package:app_cuidapet/app/core/rest_client/rest_client.dart';
 import 'package:app_cuidapet/app/modules/core/auth/auth_store.dart';
+import 'package:app_cuidapet/app/repositories/user/user_repository.dart';
+import 'package:app_cuidapet/app/repositories/user/user_repository_impl.dart';
+import 'package:app_cuidapet/app/services/user/user_service.dart';
+import 'package:app_cuidapet/app/services/user/user_service_impl.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class CoreModule extends Module {
@@ -22,5 +26,13 @@ class CoreModule extends Module {
       (i) => FlutterSecureStorageLocalSecurityStorageImpl(),
       export: true,
     ),
+    Bind.lazySingleton<UserRepository>(
+      (i) => UserRepositoryImpl(restClient: i(), log: i()),
+      export: true,
+    ),
+    Bind.lazySingleton<UserService>(
+      (i) => UserServiceImpl(userRepository: i(), log: i()),
+      export: true,
+    )
   ];
 }
