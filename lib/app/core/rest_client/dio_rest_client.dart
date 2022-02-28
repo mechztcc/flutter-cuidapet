@@ -8,7 +8,7 @@ class DioRestClient implements RestClient {
   late Dio _dio;
 
   final _options = BaseOptions(
-    baseUrl: '10.0.0.109',
+    baseUrl: 'http://10.0.0.109:8080',
     connectTimeout:
         int.parse(Environments.param('rest_connection_timeout') ?? '0'),
     receiveTimeout:

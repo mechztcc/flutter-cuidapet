@@ -18,11 +18,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
-      Loader.show();
-      Future.delayed(Duration(seconds: 2), () => Loader.hide());
-      Messages.alert('eaeee');
-    });
   }
 
   @override
