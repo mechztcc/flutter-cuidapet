@@ -1,4 +1,3 @@
-import 'package:app_cuidapet/app/core/ui/extensions/theme_extension.dart';
 import 'package:app_cuidapet/app/core/ui/ui_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';

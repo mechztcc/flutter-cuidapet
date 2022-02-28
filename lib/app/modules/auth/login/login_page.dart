@@ -1,4 +1,3 @@
-import 'package:app_cuidapet/app/core/helpers/envitonments.dart';
 import 'package:app_cuidapet/app/core/helpers/loger.dart';
 import 'package:app_cuidapet/app/core/ui/components/loader.dart';
 import 'package:app_cuidapet/app/core/ui/components/messages.dart';
@@ -7,7 +6,6 @@ import 'package:app_cuidapet/app/core/ui/extensions/theme_extension.dart';
 import 'package:app_cuidapet/app/modules/auth/login/components/login_form.dart';
 import 'package:app_cuidapet/app/modules/auth/login/components/register_buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);

@@ -8,7 +8,7 @@ class DioRestClient implements RestClient {
   late Dio _dio;
 
   final _options = BaseOptions(
-    baseUrl: Environments.param('base_url') ?? '',
+    baseUrl: '10.0.0.109',
     connectTimeout:
         int.parse(Environments.param('rest_connection_timeout') ?? '0'),
     receiveTimeout:
@@ -16,7 +16,9 @@ class DioRestClient implements RestClient {
   );
 
   DioRestClient({BaseOptions? options}) {
-    _dio = Dio(options ?? _options);
+    _dio = Dio(options = _options);
+    print('baseURL');
+    print(options.baseUrl);
   }
 
   @override
@@ -136,6 +138,7 @@ class DioRestClient implements RestClient {
     Map<String, dynamic>? headers,
   }) async {
     try {
+      print(path);
       final response = await _dio.post<T>(
         path,
         data: data,
@@ -152,11 +155,7 @@ class DioRestClient implements RestClient {
         message: err.response?.statusMessage,
         statusCode: err.response?.statusCode,
         error: err.error,
-        response: RestClientResponse(
-          data: err.response?.data,
-          statusCode: err.response?.statusCode,
-          statusMessage: err.response?.statusMessage,
-        ),
+        response: _dioErrorConverter(err.response),
       );
     }
   }
@@ -226,5 +225,13 @@ class DioRestClient implements RestClient {
         ),
       );
     }
+  }
+
+  RestClientResponse<T> _dioErrorConverter<T>(Response? response) {
+    return RestClientResponse<T>(
+      data: response?.data,
+      statusCode: response?.statusCode,
+      statusMessage: response?.statusMessage,
+    );
   }
 }
